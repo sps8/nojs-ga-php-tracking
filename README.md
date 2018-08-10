@@ -8,7 +8,7 @@ Uses PHP and [Google Measurement Protocoll](https://developers.google.com/analyt
 - Track visitors with disabled JavaScript
 - Accelerates page load and site performance
 
-> Note: This script doesn't track all data of the original Google Analytics code, especially no data that can only be determined with JavaScript, e.g. the screen resolution. The recognition of returning visitors is only as good as the server-side detection (e.g. login). Currently only the visitor is recognized within a session or by the IP. 
+> Note: This script doesn't track all data of the original Google Analytics code, especially no data that can only be determined with JavaScript, e.g. the screen resolution. The recognition of returning visitors is only as good as the server-side detection (e.g. login). Currently only the visitor is recognized within a session or by IP. 
 
 ## Installation
 
@@ -20,7 +20,7 @@ Save stat.php in web project folder, e. g. 'inc/stat.php'
 - Include script in all pages to track (index.php, ...)
 
 ```php
- include('YOURPATH/stat.php');
+include('YOURPATH/stat.php');
 ```
 
 ## Examples
@@ -29,7 +29,7 @@ Save stat.php in web project folder, e. g. 'inc/stat.php'
 
 ```js
 function ga(s,t,ec,ea,el,ev){
-	$.ajax({ type:"POST", url:"YOURPATH/stat.php", data:{"type":t,"ec":ec,"ea":ea,"el":el,"ev":ev} })
+ $.ajax({ type:"POST", url:"YOURPATH/stat.php", data:{"type":t,"ec":ec,"ea":ea,"el":el,"ev":ev} })
 }
 
 ga('send','event','CATEGORIE','ACTION','LABEL','VALUE')
